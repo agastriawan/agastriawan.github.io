@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Website dengan Pop Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+<p></p>
+<p></p>
+<p></p>
+    <main>
+      <img id="love-img" src="love.png" alt="Gambar Love"  />
+    </main>
+
+    <div class="popup">
+      <div class="popup-inner">
+        <span class="close-btn">&times;</span>
+        <div class="popup-content">
+          <img src="nat.jpg" width="200px" height="300px" >
+          <h2>Get Well Very Soon Cantik!</h2>
+          <p>Alay sih tapi gapapa hehe, send hug</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <script>
+const loveImg = document.querySelector('#love-img');
+const popup = document.querySelector('.popup');
+const closeBtn = document.querySelector('.close-btn');
+
+// cek apakah pop-up sudah ditampilkan sebelumnya
+if (!localStorage.getItem('popupShown')) {
+  // tampilkan pop-up jika belum pernah ditampilkan
+  popup.style.display = 'block';
+  // simpan status pop-up ke dalam local storage agar tidak muncul lagi ketika halaman di-refresh
+  localStorage.setItem('popupShown', 'true');
+}
+
+loveImg.addEventListener('click', () => {
+  popup.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+    </script>
+  </body>
+  </body>
+</html>
