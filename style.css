@@ -6,15 +6,16 @@ header {
   }
   
   
-  /* Menambahkan border pada gambar */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
   #love-img {
-    display: block;
-    margin: 0 auto;
     max-width: 100%;
-    height: auto;
-    border: 5px solid white;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-height: 100%;
   }
   
  /* Menambahkan border pada pop up */
